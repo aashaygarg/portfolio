@@ -69,5 +69,5 @@ After first deploy:
 - `index.html`: structure and portfolio content
 - `styles.css`: design and responsive behavior
 - `main.js`: interactivity and lightweight UI logic
-- `assets/Aashay_Garg_Resume.pdf`: downloadable resume
+- `assets/aashay-garg-resume.pdf`: downloadable resume
 - `assets/aashay-portrait-45.jpg`: optimized 4:5 hero portrait image
