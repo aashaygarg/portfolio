@@ -1,73 +1,48 @@
 # Aashay Garg Portfolio
 
-Static portfolio website with interactive system filters and recruiter-friendly structure.
+Static portfolio website built with plain HTML, CSS, and JavaScript.
+
+## Live site
+
+- GitHub Pages URL: [https://aashaygarg.github.io/portfolio/](https://aashaygarg.github.io/portfolio/)
 
 ## Local preview
 
 ```bash
-cd portfolio
 python3 -m http.server 8080
 ```
 
-Open [http://localhost:8080](http://localhost:8080).
+Then open [http://localhost:8080](http://localhost:8080).
 
-## Best hosting choice
+## Deploy (GitHub Pages)
 
-Use **Cloudflare Pages** for this site.
+This repository includes a GitHub Actions workflow:
 
-Why:
-- Fast global CDN for static files.
-- Very good free tier for personal portfolios.
-- Built-in HTTPS and custom domain support.
-- No backend needed for this project.
+- `.github/workflows/deploy-pages.yml`
 
-## Deploy in 10 minutes (Cloudflare Pages)
+### One-time setup
 
-1. Create a GitHub repo (for example `aashay-portfolio`).
-2. Upload all files from this `portfolio` folder to the repo root.
-3. In Cloudflare Dashboard: `Workers & Pages` -> `Create` -> `Pages` -> `Connect to Git`.
-4. Select your repository.
-5. Build settings:
-- Framework preset: `None`
-- Build command: *(leave empty)*
-- Build output directory: `.`
-6. Click `Save and Deploy`.
+1. Open repository `Settings` -> `Pages`.
+2. Set `Source` to `GitHub Actions`.
 
-After first deploy:
-1. Go to your Pages project -> `Custom domains` -> `Set up a custom domain`.
-2. Enter your domain (example: `aashaygarg.com`).
-3. Follow DNS instructions shown by Cloudflare (usually auto-config if domain is in Cloudflare).
-4. Wait for SSL to issue (typically a few minutes).
+### Ongoing deploys
 
-## Alternate hosts
+1. Push changes to `main`.
+2. GitHub Actions runs `Deploy static content to Pages`.
+3. Site updates automatically at the Pages URL.
 
-### Vercel
-- Import repo.
-- Framework: `Other`.
-- Build command: empty.
-- Output directory: `.`
+## Project structure
 
-### Netlify
-- New site from Git.
-- Build command: empty.
-- Publish directory: `.`
+- `index.html`: page content and structure
+- `styles.css`: layout, visual design, and responsive behavior
+- `main.js`: UI interactions (scroll progress, section highlighting, filters, copy email)
+- `assets/`: resume and profile images
+- `.nojekyll`: ensures static files are served as-is on GitHub Pages
 
-### GitHub Pages
-- Push this as repository root.
-- Repository `Settings` -> `Pages`.
-- Deploy from branch `main`, folder `/ (root)`.
+## Features
 
-## Current interactive features
-
-- Section-aware navigation highlighting
+- Section-aware navigation highlight
 - Scroll progress indicator
-- Copy-to-clipboard email button
-- Systems filter chips for fast domain-level browsing
-
-## Files
-
-- `index.html`: structure and portfolio content
-- `styles.css`: design and responsive behavior
-- `main.js`: interactivity and lightweight UI logic
-- `assets/aashay-garg-resume.pdf`: downloadable resume
-- `assets/aashay-portrait-45.jpg`: optimized 4:5 hero portrait image
+- Systems filter buttons
+- Copy email to clipboard
+- Responsive layout for desktop and mobile
